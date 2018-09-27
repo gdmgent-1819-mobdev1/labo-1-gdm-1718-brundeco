@@ -1,0 +1,67 @@
+
+
+body {
+	background: #cacafb;
+}
+
+.clock {
+	position: relative;
+	height: 200px;
+	width: 200px;
+	background: #fff;
+	box-sizing: border-box;
+	border-radius: 100%;
+	border: 4px solid #cacafb;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.clock .center {
+	width: 6px;
+	height: 6px;
+	border-radius: 60%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #2c2c2c;
+}
+
+.clock .indicator {
+	width: 3px;
+	height: 50%;
+	background: black;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform-origin: 50% 100%;
+}
+
+.indicator .minute {
+	height: 10px;
+}
+
+
+.hour {
+	height: 30% !important;
+	top: 20% !important;
+}
+
+.minute {
+	height: 40% !important;
+	top: 10% !important;
+}
+
+
+
+
+
+
+
+

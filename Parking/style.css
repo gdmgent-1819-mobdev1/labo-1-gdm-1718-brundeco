@@ -1,0 +1,20 @@
+* {
+	list-style: none;
+	padding-left: 0;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 80px;
+}
+
+.parkingOverview {
+	min-width: 30%;
+	background-color: #fff;
+	margin: 10px;
+	padding: 40px 20px;
+	border: 1px solid #000;
+	text-align: center;
+}
