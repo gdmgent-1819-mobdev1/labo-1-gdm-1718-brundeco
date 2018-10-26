@@ -1,25 +1,25 @@
+let hourHand = document.getElementById('hourHand');
+let minuteHand = document.getElementById('minuteHand');
+let secondHand = document.getElementById('secondHand');
 
-const second = document.querySelector('.indicator.second');
-const minute = document.querySelector('.indicator.minute');
-const hour = document.querySelector('.indicator.hour');
+function currentTime() {
+	let date = new Date();
+	let hours = date.getHours();
+	let minutes = date.getMinutes();
+	let seconds = date.getSeconds();
+	
+	
+	let hourDeg = hours * 30;
+	let minuteDeg = minutes * 6;
+	let secondDeg = seconds * 6;
+	
+	hourHand.style.transform = 'rotate(' + hourDeg + 'deg)';
+	minuteHand.style.transform = 'rotate(' + minuteDeg + 'deg)';
+	secondHand.style.transform = 'rotate(' + secondDeg + 'deg)';
 
-
-function setDate() {
-	const now = new Date();
-
-	const seconds = now.getSeconds();
-	const secondsDegrees = (360/60) * seconds;
-	second.style.transform = 'rotate('+secondsDegrees + 'deg)';
-
-	const minutes = now.getMinutes();
-	const minutesDegrees = (360 / 60) * minutes;
-	minute.style.transform = 'rotate('+ minutesDegrees +'deg)';
-
-	const hours = now.getHours();
-	const hoursDegrees = (360/60) * hours;
-	hour.style.transform = 'rotate('+hoursDegrees +'deg)';
-
+	setTimeout(currentTime, 800);
 }
 
+currentTime();
 
-setInterval(setDate, 1000);
+

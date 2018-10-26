@@ -1,0 +1,16 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    padding: 15% 30%;
+}
+
+div {
+    margin: 20px;
+    box-shadow: 3px 3px 25px lightgrey;
+    padding: 10px;
+}
+
+h4 {
+    display: inline-block;
+    font-weight: lighter;
+}

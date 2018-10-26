@@ -1,56 +1,61 @@
 
-function clockBelgium(){
+function timeInBelgium(){
 
     let d = new Date();
     let hours = d.getHours();
-    
     let minutes = d.getMinutes();
     let seconds = d.getSeconds();
 
     if (hours < 10){
-         hours = "0" + hours;
+         hours = '0' + hours;
     }
     if (minutes < 10){
-         minutes = "0"+minutes;
+         minutes = '0' + minutes;
     }
     if (seconds < 10){
-         seconds = "0"+seconds;
+         seconds = '0' + seconds;
     }
 
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-
-    document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById('hours-be').innerHTML = hours + ' : ';
+    document.getElementById('minutes-be').innerHTML = minutes + ' : ';
+    document.getElementById('seconds-be').innerHTML = seconds;
 }
-setInterval(clockBelgium,500);
 
-function clockNewYork(){
+setInterval(timeInBelgium, 600);
+
+function timeInNewYork() {
 
     let d = new Date();
-    let hoursinb = d.getHours();
+    let timeBe = d.getHours();
+    let minutes = d.getMinutes();
+    let seconds = d.getSeconds();
+    let hours;
 
-    let hours2;
-    if(hoursinb>=6){
-        hours2 = hoursinb-6
-       }else{
-           hours2 = hoursinb+18;
-       }
-    let minutes2 = d.getMinutes();
-    let seconds2 = d.getSeconds();
-    if (hours2<10){
-         hours2 = "0"+hours2;
-    }
-    if (minutes2<10){
-         minutes2 = "0"+minutes2;
-    }
+    if (timeBe >= 6) {
+        hours = timeBe -6;
+       } else {
+        hours = timeBe + 18;
+    };
 
-    if (seconds2<10){
-         seconds2 = "0"+seconds2;
-    }
+    if (hours < 10) {
+        hours = '0' + hours;
+    };
 
-    document.getElementById("hours2").innerHTML = hours2;
+    if (minutes < 10) {
+        minutes = '0' + minutes;
+    };
 
-    document.getElementById("minutes2").innerHTML = minutes2;
-    document.getElementById("seconds2").innerHTML = seconds2;
+    if (seconds < 10) {
+        seconds = '0' + seconds;
+    };
+
+    document.getElementById('hours-ny').innerHTML = hours + ' : ';
+    document.getElementById('minutes-ny').innerHTML = minutes + ' : ';
+    document.getElementById('seconds-ny').innerHTML = seconds;
 }
-setInterval(clockNewYork,500);
+
+setInterval(timeInNewYork, 600);
+
+
+
+
